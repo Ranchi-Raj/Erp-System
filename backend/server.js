@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 dotenv.config({ path: './config.env' })
+const cors = require('cors')
 const UserRoute = require('./routes/userRoute')
 const TaskRouter = require('./routes/taskRoute')
 const FeedbackRouter = require('./routes/feedbackRoute')
@@ -10,6 +11,14 @@ const AdminRoute = require('./routes/adminUserRoute')
 const app = express()
 
 app.use(express.json())
+
+app.use(cors(
+    {
+        origin : ["https://erp-system-api.vercel.app"],
+        methods : ["POST", "GET" , "PATCH"],
+        credentials : true
+    }
+))
 
 // DATABASE CONNECTION
 const url = process.env.DATABASE || "mongodb+srv://rajadi792:30102003@cluster0.oueq7ai.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
