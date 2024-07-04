@@ -12,7 +12,7 @@ const app = express()
 
 app.use(cors(
     {
-        origin : ["https://erp-system-api.vercel.app"],
+        origin : ["https://erp-system-frontend.vercel.app"],
         methods : ["POST", "GET" , "PATCH"],
         credentials : true
     }
