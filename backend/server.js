@@ -10,8 +10,6 @@ const AttendenceRouter = require('./routes/attendenceRouter')
 const AdminRoute = require('./routes/adminUserRoute')
 const app = express()
 
-app.use(express.json())
-
 app.use(cors(
     {
         origin : ["https://erp-system-api.vercel.app"],
@@ -19,6 +17,10 @@ app.use(cors(
         credentials : true
     }
 ))
+
+
+app.use(express.json())
+
 
 // DATABASE CONNECTION
 const url = process.env.DATABASE || "mongodb+srv://rajadi792:30102003@cluster0.oueq7ai.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
