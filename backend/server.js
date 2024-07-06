@@ -10,13 +10,13 @@ const AttendenceRouter = require('./routes/attendenceRouter')
 const AdminRoute = require('./routes/adminUserRoute')
 const app = express()
 
-app.use(cors(
-    {
-        origin : ["https://erp-system-frontend.vercel.app"],
-        methods : ["POST", "GET" , "PATCH"],
-        credentials : true
-    }
-))
+// app.use(cors(
+//     {
+//         origin : ["https://erp-system-frontend.vercel.app"],
+//         methods : ["POST", "GET" , "PATCH"],
+//         credentials : true
+//     }
+// ))
 
 
 app.use(express.json())
