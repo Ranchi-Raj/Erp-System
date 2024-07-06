@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://erp-backend-xxnj.onrender.com/',
+      '/api': 'https://erp-backend-xxnj.onrender.com',
        
     }
   }
